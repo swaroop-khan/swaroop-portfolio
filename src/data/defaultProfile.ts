@@ -2,51 +2,42 @@ import { ProfileData, TechBadge, ProjectCard } from '../types';
 
 export const ALL_TECH_BADGES: TechBadge[] = [
   // Programming Languages
-  { id: 'c', name: 'C', category: 'languages', badgeColor: '00599C', logo: 'c', logoColor: 'white', level: 'Advanced', highlight: 'Systems programming & algorithmic logic' },
-  { id: 'cpp', name: 'C++', category: 'languages', badgeColor: '00599C', logo: 'c%2B%2B', logoColor: 'white', level: 'Advanced', highlight: 'STL, Data Structures, OOP architecture' },
-  { id: 'python', name: 'Python', category: 'languages', badgeColor: '3776AB', logo: 'python', logoColor: 'white', level: 'Expert', highlight: 'ML Modeling, PyTorch/Scikit, Data Pipelines' },
-  { id: 'javascript', name: 'JavaScript', category: 'languages', badgeColor: 'F7DF1E', logo: 'javascript', logoColor: 'black', level: 'Advanced', highlight: 'Modern ES6+, Async Event Loops & Tooling' },
-  { id: 'typescript', name: 'TypeScript', category: 'languages', badgeColor: '3178C6', logo: 'typescript', logoColor: 'white', level: 'Advanced', highlight: 'Type safety, Scalable frontends & APIs' },
-  { id: 'sql', name: 'SQL', category: 'languages', badgeColor: '336791', logo: 'postgresql', logoColor: 'white', level: 'Advanced', highlight: 'Relational query optimization, joins & schemas' },
+  { id: 'c', name: 'C', category: 'languages', badgeColor: '00599C', logo: 'c', logoColor: 'white', level: 'Advanced', highlight: 'Low-level systems, pointer arithmetic & graphics canvas' },
+  { id: 'cpp', name: 'C++', category: 'languages', badgeColor: '00599C', logo: 'c%2B%2B', logoColor: 'white', level: 'Advanced', highlight: 'STL, OOP architecture & algorithmic problem-solving' },
+  { id: 'python', name: 'Python', category: 'languages', badgeColor: '3776AB', logo: 'python', logoColor: 'white', level: 'Expert', highlight: 'Primary ML modeling, Optuna tuning, automation scripts' },
+  { id: 'javascript', name: 'JavaScript', category: 'languages', badgeColor: 'F7DF1E', logo: 'javascript', logoColor: 'black', level: 'Advanced', highlight: 'Asynchronous full-stack applications & Voice agent backends' },
+  { id: 'typescript', name: 'TypeScript', category: 'languages', badgeColor: '3178C6', logo: 'typescript', logoColor: 'white', level: 'Advanced', highlight: 'Type-safe production web apps & UI components' },
+  { id: 'sql', name: 'SQL', category: 'languages', badgeColor: '336791', logo: 'postgresql', logoColor: 'white', level: 'Advanced', highlight: 'Relational data querying, schema design & transformations' },
 
   // Machine Learning & Data Science
-  { id: 'numpy', name: 'NumPy', category: 'ml_ds', badgeColor: '013243', logo: 'numpy', logoColor: 'white', level: 'Expert', highlight: 'Vectorized N-dim tensors, linear algebra' },
-  { id: 'pandas', name: 'Pandas', category: 'ml_ds', badgeColor: '150458', logo: 'pandas', logoColor: 'white', level: 'Expert', highlight: 'Feature engineering, tabular data manipulation' },
-  { id: 'matplotlib', name: 'Matplotlib', category: 'ml_ds', badgeColor: '11557C', logo: 'python', logoColor: 'white', level: 'Advanced', highlight: 'Scientific visualization & analytical plotting' },
-  { id: 'seaborn', name: 'Seaborn', category: 'ml_ds', badgeColor: '388E3C', logo: 'python', logoColor: 'white', level: 'Advanced', highlight: 'Statistical distribution graphics & correlation' },
-  { id: 'plotly', name: 'Plotly', category: 'ml_ds', badgeColor: '3F4F75', logo: 'plotly', logoColor: 'white', level: 'Advanced', highlight: 'Interactive visual exploration dashboards' },
-  { id: 'scikitlearn', name: 'Scikit-Learn', category: 'ml_ds', badgeColor: 'F7931E', logo: 'scikit-learn', logoColor: 'white', level: 'Expert', highlight: 'Supervised/unsupervised pipelines, cross-validation' },
-  { id: 'xgboost', name: 'XGBoost', category: 'ml_ds', badgeColor: '185387', logo: 'xgboost', logoColor: 'white', level: 'Expert', highlight: 'Gradient boosted trees, tabular leaderboard benchmarks' },
-  { id: 'imbalancedlearn', name: 'Imbalanced-Learn', category: 'ml_ds', badgeColor: 'E25A1C', logo: 'python', logoColor: 'white', level: 'Advanced', highlight: 'SMOTE, Resampling, Class imbalance mitigation' },
-  { id: 'optuna', name: 'Optuna', category: 'ml_ds', badgeColor: '1A73E8', logo: 'python', logoColor: 'white', level: 'Advanced', highlight: 'Bayesian hyperparameter optimization pruning' },
-  { id: 'joblib', name: 'Joblib', category: 'ml_ds', badgeColor: '4B8BBE', logo: 'python', logoColor: 'white', level: 'Advanced', highlight: 'Model persistence, parallel CPU pipelining' },
-  { id: 'pytorch', name: 'PyTorch', category: 'ml_ds', badgeColor: 'EE4C2C', logo: 'pytorch', logoColor: 'white', level: 'Advanced', highlight: 'Deep neural networks, autograd & training loops' },
-  { id: 'tensorflow', name: 'TensorFlow', category: 'ml_ds', badgeColor: 'FF6F00', logo: 'tensorflow', logoColor: 'white', level: 'Intermediate', highlight: 'Keras architectures & graph computation' },
+  { id: 'numpy', name: 'NumPy', category: 'ml_ds', badgeColor: '013243', logo: 'numpy', logoColor: 'white', level: 'Expert', highlight: 'High-performance n-dimensional array computing' },
+  { id: 'pandas', name: 'Pandas', category: 'ml_ds', badgeColor: '150458', logo: 'pandas', logoColor: 'white', level: 'Expert', highlight: 'Tabular data munging, feature creation & cleaning' },
+  { id: 'scikitlearn', name: 'Scikit-Learn', category: 'ml_ds', badgeColor: 'F7931E', logo: 'scikit-learn', logoColor: 'white', level: 'Expert', highlight: 'Classification, regression, stratified cross-validation' },
+  { id: 'xgboost', name: 'XGBoost', category: 'ml_ds', badgeColor: '185387', logo: 'xgboost', logoColor: 'white', level: 'Expert', highlight: 'Gradient boosting ensembles for Kaggle benchmarks' },
+  { id: 'imbalancedlearn', name: 'Imbalanced-Learn', category: 'ml_ds', badgeColor: 'E25A1C', logo: 'python', logoColor: 'white', level: 'Advanced', highlight: 'SMOTE resampling & class imbalance resolution' },
+  { id: 'optuna', name: 'Optuna', category: 'ml_ds', badgeColor: '1A73E8', logo: 'python', logoColor: 'white', level: 'Advanced', highlight: 'Bayesian hyperparameter optimization & automated trial pruning' },
+  { id: 'joblib', name: 'Joblib', category: 'ml_ds', badgeColor: '4B8BBE', logo: 'python', logoColor: 'white', level: 'Advanced', highlight: 'Model artifact serialization & parallel pipeline execution' },
+  { id: 'matplotlib', name: 'Matplotlib', category: 'ml_ds', badgeColor: '11557C', logo: 'python', logoColor: 'white', level: 'Advanced', highlight: 'Exploratory data analysis & performance curve visualization' },
+  { id: 'seaborn', name: 'Seaborn', category: 'ml_ds', badgeColor: '388E3C', logo: 'python', logoColor: 'white', level: 'Advanced', highlight: 'Statistical distributions, correlation matrices & violin plots' },
+  { id: 'plotly', name: 'Plotly', category: 'ml_ds', badgeColor: '3F4F75', logo: 'plotly', logoColor: 'white', level: 'Advanced', highlight: 'Interactive visual diagnostics & web dashboards' },
 
   // AI & Development Ecosystem
-  { id: 'streamlit', name: 'Streamlit', category: 'ai_ecosystem', badgeColor: 'FF4B4B', logo: 'streamlit', logoColor: 'white', level: 'Expert', highlight: 'Rapid reactive AI demos & ML web apps' },
-  { id: 'jupyter', name: 'Jupyter', category: 'ai_ecosystem', badgeColor: 'F37626', logo: 'jupyter', logoColor: 'white', level: 'Expert', highlight: 'Interactive exploratory research & prototyping' },
-  { id: 'kaggle', name: 'Kaggle', category: 'ai_ecosystem', badgeColor: '20BEFF', logo: 'kaggle', logoColor: 'white', level: 'Advanced', highlight: 'Competitions, benchmark datasets & notebooks' },
-  { id: 'assemblyai', name: 'AssemblyAI', category: 'ai_ecosystem', badgeColor: '1E1E2F', logo: 'soundcharts', logoColor: 'white', level: 'Advanced', highlight: 'Speech-to-text, audio intelligence & transcription' },
-  { id: 'supabase', name: 'Supabase', category: 'ai_ecosystem', badgeColor: '3ECF8E', logo: 'supabase', logoColor: 'white', level: 'Advanced', highlight: 'PostgreSQL backend, vector embeddings & auth' },
-  { id: 'huggingface', name: 'Hugging Face', category: 'ai_ecosystem', badgeColor: 'FFD21E', logo: 'huggingface', logoColor: 'black', level: 'Advanced', highlight: 'Transformers, model hubs & pipeline APIs' },
-  { id: 'langchain', name: 'LangChain', category: 'ai_ecosystem', badgeColor: '1C3C3C', logo: 'chainlink', logoColor: 'white', level: 'Advanced', highlight: 'Agentic workflows, chains & tool orchestration' },
+  { id: 'assemblyai', name: 'AssemblyAI', category: 'ai_ecosystem', badgeColor: '1E1E2F', logo: 'soundcharts', logoColor: 'white', level: 'Advanced', highlight: 'Speech-to-text intelligence for conversational AI agents' },
+  { id: 'streamlit', name: 'Streamlit', category: 'ai_ecosystem', badgeColor: 'FF4B4B', logo: 'streamlit', logoColor: 'white', level: 'Expert', highlight: 'Interactive web UI for ML churn models & inference' },
+  { id: 'jupyter', name: 'Jupyter', category: 'ai_ecosystem', badgeColor: 'F37626', logo: 'jupyter', logoColor: 'white', level: 'Expert', highlight: 'Exploratory data science research & experimentation' },
+  { id: 'kaggle', name: 'Kaggle', category: 'ai_ecosystem', badgeColor: '20BEFF', logo: 'kaggle', logoColor: 'white', level: 'Advanced', highlight: 'Competitive data science modeling & benchmarks' },
+  { id: 'supabase', name: 'Supabase', category: 'ai_ecosystem', badgeColor: '3ECF8E', logo: 'supabase', logoColor: 'white', level: 'Advanced', highlight: 'Cloud PostgreSQL database & serverless API storage' },
 
   // Web Development & Infrastructure
-  { id: 'html5', name: 'HTML5', category: 'web', badgeColor: 'E34F26', logo: 'html5', logoColor: 'white', level: 'Expert', highlight: 'Semantic document structure & accessibility' },
-  { id: 'css3', name: 'CSS3', category: 'web', badgeColor: '1572B6', logo: 'css3', logoColor: 'white', level: 'Expert', highlight: 'Responsive grid, flexbox & design systems' },
-  { id: 'nodejs', name: 'Node.js', category: 'web', badgeColor: '339933', logo: 'node.js', logoColor: 'white', level: 'Advanced', highlight: 'Backend services, REST APIs & microservices' },
-  { id: 'vercel', name: 'Vercel', category: 'web', badgeColor: '000000', logo: 'vercel', logoColor: 'white', level: 'Advanced', highlight: 'Serverless deployment, edge caching & CDN' },
-  { id: 'react', name: 'React', category: 'web', badgeColor: '61DAFB', logo: 'react', logoColor: 'black', level: 'Advanced', highlight: 'Component architectures & reactive state UI' },
-  { id: 'tailwindcss', name: 'Tailwind CSS', category: 'web', badgeColor: '06B6D4', logo: 'tailwindcss', logoColor: 'white', level: 'Advanced', highlight: 'Utility-first modern styling & responsiveness' },
-  { id: 'fastapi', name: 'FastAPI', category: 'web', badgeColor: '009688', logo: 'fastapi', logoColor: 'white', level: 'Advanced', highlight: 'High-performance async Python model serving APIs' },
+  { id: 'html5', name: 'HTML5', category: 'web', badgeColor: 'E34F26', logo: 'html5', logoColor: 'white', level: 'Expert', highlight: 'Semantic markup & accessible structural layout' },
+  { id: 'css3', name: 'CSS3', category: 'web', badgeColor: '1572B6', logo: 'css3', logoColor: 'white', level: 'Expert', highlight: 'Modern responsive layouts, animations & custom styling' },
+  { id: 'nodejs', name: 'Node.js', category: 'web', badgeColor: '339933', logo: 'node.js', logoColor: 'white', level: 'Advanced', highlight: 'Backend microservices, runtime execution & REST endpoints' },
+  { id: 'vercel', name: 'Vercel', category: 'web', badgeColor: '000000', logo: 'vercel', logoColor: 'white', level: 'Advanced', highlight: 'Edge deployments, continuous delivery & portfolio hosting' },
 
   // Developer Tools & Hardware
-  { id: 'git', name: 'Git', category: 'tools', badgeColor: 'F05032', logo: 'git', logoColor: 'white', level: 'Expert', highlight: 'Version control, atomic commits & branch strategy' },
-  { id: 'github', name: 'GitHub', category: 'tools', badgeColor: '181717', logo: 'github', logoColor: 'white', level: 'Expert', highlight: 'Actions, CI/CD pipelines & open source' },
-  { id: 'arduino', name: 'Arduino', category: 'tools', badgeColor: '00979D', logo: 'arduino', logoColor: 'white', level: 'Intermediate', highlight: 'Microcontroller programming & sensor hardware' },
-  { id: 'docker', name: 'Docker', category: 'tools', badgeColor: '2496ED', logo: 'docker', logoColor: 'white', level: 'Intermediate', highlight: 'Containerized deployment & reproducible environments' },
-  { id: 'linux', name: 'Linux / Bash', category: 'tools', badgeColor: 'FCC624', logo: 'linux', logoColor: 'black', level: 'Advanced', highlight: 'Shell scripting, server automation & POSIX CLI' }
+  { id: 'git', name: 'Git', category: 'tools', badgeColor: 'F05032', logo: 'git', logoColor: 'white', level: 'Expert', highlight: 'Version control, atomic commits, branch workflows' },
+  { id: 'github', name: 'GitHub', category: 'tools', badgeColor: '181717', logo: 'github', logoColor: 'white', level: 'Expert', highlight: 'Open-source collaboration, issues & repository hosting' },
+  { id: 'arduino', name: 'Arduino', category: 'tools', badgeColor: '00979D', logo: 'arduino', logoColor: 'white', level: 'Intermediate', highlight: 'Embedded microcontroller logic & sensor integration' }
 ];
 
 export const INITIAL_PROFILE: ProfileData = {
@@ -93,56 +84,71 @@ export const INITIAL_PROFILE: ProfileData = {
     'git', 'github', 'arduino'
   ],
   statsTheme: 'tokyonight',
-  customSections: [
-    {
-      id: 'ml_lifecycle',
-      title: 'Machine Learning Workflow Architecture',
-      content: '1. Problem Formulation & Data Exploration\n2. Feature Engineering & Preprocessing (Imbalanced-Learn, Pandas)\n3. Model Training & Validation (Scikit-Learn, XGBoost)\n4. Bayesian Optimization & Tuning (Optuna)\n5. Deployment & Interactive UI (Streamlit, Supabase, Vercel)',
-      enabled: true
-    }
-  ]
+  customSections: []
 };
 
+// Pinned / Authentic repositories from @swaroop-khan on GitHub
 export const FEATURED_PROJECTS: ProjectCard[] = [
   {
-    id: 'agentic-pipeline',
-    title: 'Agentic ML Modeling Pipeline',
-    description: 'Autonomous data cleaning, automated feature selection with cross-validation and Optuna Bayesian tuning dashboard.',
-    tags: ['Python', 'Scikit-Learn', 'Optuna', 'Streamlit'],
-    githubUrl: 'https://github.com/swaroop-khan',
-    stars: 18,
-    forks: 5,
+    id: 'voxhire',
+    title: 'VoxHire — AI Voice Technical Interviewer',
+    description: 'AI-powered voice interviewer that conducts adaptive technical interviews, asks intelligent follow-up questions, evaluates candidate responses in real-time, and generates structured performance reports.',
+    tags: ['AssemblyAI', 'JavaScript', 'Node.js', 'Voice Agent'],
+    githubUrl: 'https://github.com/swaroop-khan/Voxhire',
+    liveUrl: 'https://voice-agent-r3fb.onrender.com/',
+    stars: 1,
+    forks: 0,
     featured: true
   },
   {
-    id: 'speech-intelligence',
-    title: 'Speech Intelligence & Audio Extraction',
-    description: 'Speech-to-text transcription and automated semantic insight summarizer built with AssemblyAI and Supabase.',
-    tags: ['AssemblyAI', 'Python', 'Supabase', 'Node.js'],
-    githubUrl: 'https://github.com/swaroop-khan',
-    stars: 14,
-    forks: 3,
+    id: 'telecom-churn',
+    title: 'Telecom Customer Churn Predictor',
+    description: 'Production machine learning application featuring automated Optuna Bayesian hyperparameter optimization, SMOTE class balancing for imbalanced subscriber data, and an interactive Streamlit UI.',
+    tags: ['Python', 'Optuna', 'Imbalanced-Learn', 'Streamlit', 'Scikit-Learn'],
+    githubUrl: 'https://github.com/swaroop-khan/telecom-customer-churn-prediction',
+    stars: 1,
+    forks: 0,
     featured: true
   },
   {
-    id: 'imbalanced-benchmark',
-    title: 'Imbalanced Tabular Classifier Benchmark',
-    description: 'Comparative framework evaluating SMOTE variants, XGBoost hyperparameter landscapes, and cost-sensitive loss curves.',
-    tags: ['XGBoost', 'Imbalanced-Learn', 'Plotly', 'Pandas'],
-    githubUrl: 'https://github.com/swaroop-khan',
-    stars: 22,
-    forks: 7,
+    id: 'house-prices',
+    title: 'House Price Prediction (Kaggle)',
+    description: 'End-to-end regression modeling pipeline for the Kaggle House Prices competition utilizing gradient boosting architectures, feature interaction engineering, and cross-validation benchmarks.',
+    tags: ['Python', 'XGBoost', 'Pandas', 'Kaggle', 'Jupyter'],
+    githubUrl: 'https://github.com/swaroop-khan/house-price-prediction',
+    stars: 1,
+    forks: 0,
     featured: true
   },
   {
-    id: 'fullstack-ai-hub',
-    title: 'Developer Profile & System Architecture Showcase',
-    description: 'Production web application delivering interactive model inference simulations, responsive terminal, and dynamic README customization.',
-    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Vercel'],
-    githubUrl: 'https://github.com/swaroop-khan',
-    liveUrl: 'https://swaroop-khan.github.io/portfolio/',
-    stars: 27,
-    forks: 9,
+    id: 'titanic-ml',
+    title: 'Titanic Survival Machine Learning',
+    description: 'Comprehensive tabular classification pipeline demonstrating feature extraction, missing-value imputation, stratified cross-validation, and ensemble decision evaluation.',
+    tags: ['Python', 'Scikit-Learn', 'Pandas', 'Matplotlib'],
+    githubUrl: 'https://github.com/swaroop-khan/titanic-survival-ml',
+    stars: 1,
+    forks: 0,
+    featured: true
+  },
+  {
+    id: 'graphic-editor',
+    title: '2D Graphics Canvas Editor in C',
+    description: 'Low-level character-based 2D graphics engine implemented in C, enabling dynamic rasterization and management of rectangles, lines, triangles, and circles through a structured terminal interface.',
+    tags: ['C', 'Data Structures', 'Graphics', 'CLI'],
+    githubUrl: 'https://github.com/swaroop-khan/graphic-editor',
+    stars: 1,
+    forks: 0,
+    featured: true
+  },
+  {
+    id: 'developer-portfolio',
+    title: 'Interactive Developer Portfolio',
+    description: 'Personal web engineering showcase and profile application built with TypeScript and modern component architecture, deployed globally on Vercel.',
+    tags: ['TypeScript', 'JavaScript', 'CSS3', 'Vercel'],
+    githubUrl: 'https://github.com/swaroop-khan/swaroop-portfolio',
+    liveUrl: 'https://swaroop-portfolio-one.vercel.app',
+    stars: 0,
+    forks: 0,
     featured: true
   }
 ];

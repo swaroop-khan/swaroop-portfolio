@@ -64,13 +64,13 @@ export const ReadmeStudio: React.FC<ReadmeStudioProps> = ({
   return (
     <div className="py-8 max-w-7xl mx-auto px-4 md:px-8 space-y-6">
       {/* Studio Header bar */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-5 rounded-xl border border-slate-800 bg-slate-900/80">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-5 rounded-xl border border-indigo-500/20 bg-[#080C1B]/90 shadow-xl">
         <div>
           <h2 className="text-xl font-bold text-white tracking-tight flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-sm bg-gradient-to-r from-purple-500 to-indigo-500" />
+            <span className="w-2.5 h-2.5 rounded-sm bg-gradient-to-r from-cyan-400 via-indigo-500 to-purple-500" />
             <span>Interactive GitHub README Studio</span>
           </h2>
-          <p className="text-xs text-slate-400 mt-1">
+          <p className="text-xs text-slate-300 mt-1 font-mono">
             Real-time visual editor & markdown compiler configured for GitHub Profile Readme standard.
           </p>
         </div>
@@ -78,7 +78,7 @@ export const ReadmeStudio: React.FC<ReadmeStudioProps> = ({
         <div className="flex flex-wrap items-center gap-2 shrink-0">
           <button
             onClick={onOpenAiEnhance}
-            className="px-3 py-1.5 text-xs font-medium text-cyan-300 bg-cyan-950/40 border border-cyan-800/60 rounded-lg hover:bg-cyan-900/40 transition-colors flex items-center gap-1.5"
+            className="px-3 py-1.5 text-xs font-medium text-cyan-300 bg-cyan-950/30 border border-cyan-800/40 rounded-lg hover:bg-cyan-900/40 transition-colors flex items-center gap-1.5"
           >
             <Sparkles className="w-3.5 h-3.5" />
             <span>AI Polish</span>
@@ -86,15 +86,15 @@ export const ReadmeStudio: React.FC<ReadmeStudioProps> = ({
 
           <button
             onClick={onOpenDeployGuide}
-            className="px-3 py-1.5 text-xs font-medium text-slate-300 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg transition-colors flex items-center gap-1.5"
+            className="px-3 py-1.5 text-xs font-medium text-slate-300 bg-[#090D1C] hover:bg-indigo-950/60 border border-indigo-950/80 rounded-lg transition-colors flex items-center gap-1.5"
           >
-            <HelpCircle className="w-3.5 h-3.5" />
+            <HelpCircle className="w-3.5 h-3.5 text-indigo-400" />
             <span>Deploy Guide</span>
           </button>
 
           <button
             onClick={handleCopy}
-            className="px-3.5 py-1.5 text-xs font-medium text-white bg-cyan-600 hover:bg-cyan-500 rounded-lg transition-colors flex items-center gap-1.5 shadow-sm"
+            className="px-3.5 py-1.5 text-xs font-medium text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 rounded-lg transition-all flex items-center gap-1.5 shadow-sm"
           >
             {copied ? <Check className="w-3.5 h-3.5 text-white" /> : <Copy className="w-3.5 h-3.5" />}
             <span>{copied ? 'Copied to Clipboard!' : 'Copy Markdown'}</span>
@@ -102,15 +102,15 @@ export const ReadmeStudio: React.FC<ReadmeStudioProps> = ({
 
           <button
             onClick={handleDownload}
-            className="px-3.5 py-1.5 text-xs font-medium text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg transition-colors flex items-center gap-1.5 shadow-sm"
+            className="px-3.5 py-1.5 text-xs font-medium text-white bg-[#0B1024] hover:bg-indigo-950/60 border border-indigo-500/30 rounded-lg transition-colors flex items-center gap-1.5 shadow-sm"
           >
-            <Download className="w-3.5 h-3.5" />
+            <Download className="w-3.5 h-3.5 text-cyan-400" />
             <span>Download .md</span>
           </button>
 
           <button
             onClick={onResetDefaults}
-            className="p-1.5 text-slate-400 hover:text-white bg-slate-800/80 rounded-lg transition-colors"
+            className="p-1.5 text-slate-400 hover:text-white bg-[#0B1024] border border-indigo-950/80 rounded-lg transition-colors"
             title="Reset to Original Swaroop Profile"
           >
             <RefreshCw className="w-3.5 h-3.5" />
@@ -119,13 +119,13 @@ export const ReadmeStudio: React.FC<ReadmeStudioProps> = ({
       </div>
 
       {/* View Switcher Bar */}
-      <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+      <div className="flex items-center justify-between border-b border-indigo-950/70 pb-3">
         {/* Editor Sub-tabs */}
-        <div className="flex items-center gap-1 overflow-x-auto pb-1 sm:pb-0 scrollbar-none text-xs">
+        <div className="flex items-center gap-1 overflow-x-auto pb-1 sm:pb-0 scrollbar-none text-xs font-mono">
           <button
             onClick={() => setEditorSubTab('general')}
             className={`px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1.5 whitespace-nowrap ${
-              editorSubTab === 'general' ? 'bg-slate-800 text-white font-medium' : 'text-slate-400 hover:text-white'
+              editorSubTab === 'general' ? 'bg-indigo-600/30 text-cyan-300 border border-indigo-500/40' : 'text-slate-400 hover:text-white'
             }`}
           >
             <Sliders className="w-3 h-3" />
@@ -134,7 +134,7 @@ export const ReadmeStudio: React.FC<ReadmeStudioProps> = ({
           <button
             onClick={() => setEditorSubTab('banner')}
             className={`px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1.5 whitespace-nowrap ${
-              editorSubTab === 'banner' ? 'bg-slate-800 text-white font-medium' : 'text-slate-400 hover:text-white'
+              editorSubTab === 'banner' ? 'bg-indigo-600/30 text-cyan-300 border border-indigo-500/40' : 'text-slate-400 hover:text-white'
             }`}
           >
             <Palette className="w-3 h-3" />
@@ -143,7 +143,7 @@ export const ReadmeStudio: React.FC<ReadmeStudioProps> = ({
           <button
             onClick={() => setEditorSubTab('taglines')}
             className={`px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1.5 whitespace-nowrap ${
-              editorSubTab === 'taglines' ? 'bg-slate-800 text-white font-medium' : 'text-slate-400 hover:text-white'
+              editorSubTab === 'taglines' ? 'bg-indigo-600/30 text-cyan-300 border border-indigo-500/40' : 'text-slate-400 hover:text-white'
             }`}
           >
             <Type className="w-3 h-3" />
@@ -152,7 +152,7 @@ export const ReadmeStudio: React.FC<ReadmeStudioProps> = ({
           <button
             onClick={() => setEditorSubTab('socials')}
             className={`px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1.5 whitespace-nowrap ${
-              editorSubTab === 'socials' ? 'bg-slate-800 text-white font-medium' : 'text-slate-400 hover:text-white'
+              editorSubTab === 'socials' ? 'bg-indigo-600/30 text-cyan-300 border border-indigo-500/40' : 'text-slate-400 hover:text-white'
             }`}
           >
             <ExternalLink className="w-3 h-3" />
@@ -161,7 +161,7 @@ export const ReadmeStudio: React.FC<ReadmeStudioProps> = ({
           <button
             onClick={() => setEditorSubTab('raw')}
             className={`px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1.5 whitespace-nowrap ${
-              editorSubTab === 'raw' ? 'bg-slate-800 text-cyan-300 font-medium' : 'text-slate-400 hover:text-white'
+              editorSubTab === 'raw' ? 'bg-indigo-600/30 text-cyan-300 border border-indigo-500/40' : 'text-slate-400 hover:text-white'
             }`}
           >
             <Code className="w-3 h-3" />
@@ -170,22 +170,22 @@ export const ReadmeStudio: React.FC<ReadmeStudioProps> = ({
         </div>
 
         {/* Layout split buttons */}
-        <div className="hidden md:flex items-center p-0.5 bg-slate-900 border border-slate-800 rounded-lg text-xs">
+        <div className="hidden md:flex items-center p-0.5 bg-[#090D1C] border border-indigo-950/80 rounded-lg text-xs font-mono">
           <button
             onClick={() => setActiveTab('editor')}
-            className={`px-2.5 py-1 rounded ${activeTab === 'editor' ? 'bg-slate-800 text-white' : 'text-slate-400'}`}
+            className={`px-2.5 py-1 rounded ${activeTab === 'editor' ? 'bg-indigo-600/30 text-cyan-300' : 'text-slate-400'}`}
           >
             Editor Only
           </button>
           <button
             onClick={() => setActiveTab('split')}
-            className={`px-2.5 py-1 rounded ${activeTab === 'split' ? 'bg-slate-800 text-white' : 'text-slate-400'}`}
+            className={`px-2.5 py-1 rounded ${activeTab === 'split' ? 'bg-indigo-600/30 text-cyan-300' : 'text-slate-400'}`}
           >
             Split View
           </button>
           <button
             onClick={() => setActiveTab('preview')}
-            className={`px-2.5 py-1 rounded ${activeTab === 'preview' ? 'bg-slate-800 text-white' : 'text-slate-400'}`}
+            className={`px-2.5 py-1 rounded ${activeTab === 'preview' ? 'bg-indigo-600/30 text-cyan-300' : 'text-slate-400'}`}
           >
             GitHub Preview
           </button>
@@ -198,7 +198,7 @@ export const ReadmeStudio: React.FC<ReadmeStudioProps> = ({
         {(activeTab === 'editor' || activeTab === 'split') && (
           <div className={`${activeTab === 'split' ? 'lg:col-span-5' : 'lg:col-span-12'} space-y-4`}>
             {editorSubTab === 'general' && (
-              <div className="p-5 rounded-xl border border-slate-800 bg-slate-900/60 space-y-4 text-xs">
+              <div className="p-5 rounded-xl border border-indigo-950/80 bg-[#080C1B]/90 space-y-4 text-xs shadow-lg">
                 <h3 className="font-semibold text-white text-sm">Developer Bio & Overview</h3>
 
                 <div className="space-y-1">
@@ -264,7 +264,7 @@ export const ReadmeStudio: React.FC<ReadmeStudioProps> = ({
             )}
 
             {editorSubTab === 'banner' && (
-              <div className="p-5 rounded-xl border border-slate-800 bg-slate-900/60 space-y-4 text-xs">
+              <div className="p-5 rounded-xl border border-indigo-950/80 bg-[#080C1B]/90 space-y-4 text-xs shadow-lg">
                 <h3 className="font-semibold text-white text-sm">Header Banner Configuration</h3>
 
                 <div className="space-y-2">
@@ -338,7 +338,7 @@ export const ReadmeStudio: React.FC<ReadmeStudioProps> = ({
             )}
 
             {editorSubTab === 'taglines' && (
-              <div className="p-5 rounded-xl border border-slate-800 bg-slate-900/60 space-y-4 text-xs">
+              <div className="p-5 rounded-xl border border-indigo-950/80 bg-[#080C1B]/90 space-y-4 text-xs shadow-lg">
                 <div className="flex items-center justify-between">
                   <h3 className="font-semibold text-white text-sm">Typing Effect Lines</h3>
                   <button
@@ -386,7 +386,7 @@ export const ReadmeStudio: React.FC<ReadmeStudioProps> = ({
             )}
 
             {editorSubTab === 'socials' && (
-              <div className="p-5 rounded-xl border border-slate-800 bg-slate-900/60 space-y-4 text-xs">
+              <div className="p-5 rounded-xl border border-indigo-950/80 bg-[#080C1B]/90 space-y-4 text-xs shadow-lg">
                 <h3 className="font-semibold text-white text-sm">Handles & Social Profiles</h3>
 
                 <div className="space-y-1">

@@ -10,14 +10,13 @@ import { HeroBanner } from './components/HeroBanner';
 import { DirectivesAndVision } from './components/DirectivesAndVision';
 import { TechStackMatrix } from './components/TechStackMatrix';
 import { TerminalCard } from './components/TerminalCard';
-import { MLPlayground } from './components/MLPlayground';
 import { GitHubAnalytics } from './components/GitHubAnalytics';
 import { ReadmeStudio } from './components/ReadmeStudio';
 import { AIEnhanceModal } from './components/AIEnhanceModal';
 import { DeployGuideModal } from './components/DeployGuideModal';
 import { INITIAL_PROFILE, ALL_TECH_BADGES, generateMarkdown } from './data/defaultProfile';
 import { ProfileData } from './types';
-import { Check, Github, ExternalLink } from 'lucide-react';
+import { Check, Github } from 'lucide-react';
 
 export default function App() {
   const [profile, setProfile] = useState<ProfileData>(INITIAL_PROFILE);
@@ -38,7 +37,7 @@ export default function App() {
       particleCount: 45,
       spread: 60,
       origin: { y: 0.8 },
-      colors: ['#0EA5E9', '#6366F1', '#10B981'],
+      colors: ['#38BDF8', '#818CF8', '#C084FC'],
     });
     showToast('GitHub Profile README.md copied to clipboard!');
   };
@@ -94,10 +93,10 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0B0F19] text-slate-100 flex flex-col font-sans selection:bg-cyan-500/30 selection:text-cyan-200">
+    <div className="min-h-screen bg-[#050711] text-slate-100 flex flex-col font-sans selection:bg-cyan-500/30 selection:text-cyan-200">
       {/* Toast Notification */}
       {toastMessage && (
-        <div className="fixed bottom-6 right-6 z-50 bg-slate-900 border border-cyan-500/80 text-white px-4 py-2.5 rounded-xl shadow-2xl flex items-center gap-2 text-xs font-medium animate-in fade-in slide-in-from-bottom-2">
+        <div className="fixed bottom-6 right-6 z-50 bg-[#090D1C] border border-cyan-500/80 text-white px-4 py-2.5 rounded-xl shadow-2xl flex items-center gap-2 text-xs font-mono animate-in fade-in slide-in-from-bottom-2">
           <Check className="w-4 h-4 text-cyan-400" />
           <span>{toastMessage}</span>
         </div>
@@ -130,7 +129,6 @@ export default function App() {
               profile={profile}
               onRunAiQuery={handleRunAiTerminalQuery}
             />
-            <MLPlayground />
             <GitHubAnalytics
               profile={profile}
               onThemeChange={handleThemeChange}
@@ -141,7 +139,7 @@ export default function App() {
             profile={profile}
             setProfile={setProfile}
             allBadges={ALL_TECH_BADGES}
-            onOpenDeployGuide={() => setIsDeployGuideOpen(true)}
+            onOpenDeployGuide={() => setIsDeployGuideOpen(false)}
             onOpenAiEnhance={() => setIsAiEnhanceOpen(true)}
             onResetDefaults={() => setProfile(INITIAL_PROFILE)}
           />
@@ -168,13 +166,13 @@ export default function App() {
       />
 
       {/* Footer */}
-      <footer className="border-t border-slate-800/80 bg-[#070A11] py-8 text-xs text-slate-500">
+      <footer className="border-t border-indigo-950/60 bg-[#04060E] py-8 text-xs text-slate-500 font-mono">
         <div className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <span className="font-semibold text-slate-400">Swaroop Khan</span>
-            <span>·</span>
+            <span className="font-semibold text-slate-300">Swaroop Khan</span>
+            <span className="text-indigo-800">·</span>
             <span>Bangalore, India 🇮🇳</span>
-            <span>·</span>
+            <span className="text-indigo-800">·</span>
             <span>Applied AI & Machine Learning Systems</span>
           </div>
 
