@@ -1,0 +1,8 @@
+{
+  "name": "Stitch Modern Developer Profile & README Studio",
+  "description": "Interactive modern developer profile showcase and high-performance GitHub README studio for Swaroop Khan and AI/ML engineers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
